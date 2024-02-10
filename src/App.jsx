@@ -11,8 +11,8 @@ function App() {
       <BrowserRouter>
         <header>
           <nav>
-            <NavLink to={<Home />}>Home</NavLink>
-            <NavLink to={<Movies />}>Movies</NavLink>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/movies">Movies</NavLink>
           </nav>
         </header>
         <Routes>
