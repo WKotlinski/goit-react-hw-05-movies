@@ -3,12 +3,14 @@ import useFetch from "../../hooks/useFetch";
 
 const SearchBar = ({ onSubmit }) => {
   const [query, setQuery] = useState("");
+  const [search, setSearch] = useState("");
   const { data, loading, error } = useFetch(
-    `https://api.themoviedb.org/3/search/movie?api_key=f538ea2fb2bd149bcd5c773b9ce949af&query=${query}`
+    `https://api.themoviedb.org/3/search/movie?api_key=f538ea2fb2bd149bcd5c773b9ce949af&query=${search}`
   );
 
   const handleSubmit = (event) => {
     event.preventDefault();
+    setSearch(query);
     onSubmit(query);
   };
   const handleInputChange = (event) => {
@@ -26,10 +28,6 @@ const SearchBar = ({ onSubmit }) => {
       </form>
       {error && <div>{error}</div>}
       {loading && <div>Loading...</div>}
-      {data &&
-        data.results &&
-        Array.isArray(data.results) &&
-        data.results.map((result) => <div key={result.id}>{result}</div>)}
     </div>
   );
 };
