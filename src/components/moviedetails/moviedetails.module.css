@@ -1,0 +1,49 @@
+.container {
+  padding: 20px;
+}
+
+.error,
+.loading {
+  color: red;
+  font-size: 20px;
+}
+
+.movieDetails {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movieTitle {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.movieImage {
+  width: 200px;
+  height: auto;
+}
+
+.movieOverview {
+  font-size: 16px;
+}
+
+.button {
+  margin: 10px;
+  padding: 10px;
+  border: none;
+  background-color: #4caf50;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid #4caf50;
+}
