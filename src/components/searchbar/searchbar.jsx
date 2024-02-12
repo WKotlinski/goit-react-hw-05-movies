@@ -1,6 +1,6 @@
 import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
-
+import css from "./searchbar.module.css";
 const SearchBar = ({ onSubmit }) => {
   const [query, setQuery] = useState("");
   const [search, setSearch] = useState("");
@@ -20,8 +20,8 @@ const SearchBar = ({ onSubmit }) => {
   return (
     <div>
       <h1>Search Bar</h1>
-      <form className="form" onSubmit={handleSubmit}>
-        <button type="submit" className="submitBtn">
+      <form className={css.form} onSubmit={handleSubmit}>
+        <button type="submit" className={css.submitBtn}>
           Submit
         </button>
         <input type="text" value={query} onChange={handleInputChange} />
