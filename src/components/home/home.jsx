@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import styles from "./home.module.css";
 
 import axios from "axios";
 import { Link } from "react-router-dom";
@@ -33,15 +34,16 @@ const Home = () => {
       <h1>Strona główna</h1>
       {error && <div>{error}</div>}
       {loading && <div>Loading...</div>}
-      <ul className="movie-list">
+      <ul className={movie - list}>
         {movieList.map((movie) => (
           <li key={movie.id}>
-            <Link to={`/movies/${movie.id}`}>{movie.title}</Link>
-            {movie.overview}
-            <img
-              src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
-              alt=""
-            />
+            <Link to={`/movies/${movie.id}`}>
+              {movie.title}
+              <img
+                src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                alt=""
+              />
+            </Link>
           </li>
         ))}
       </ul>

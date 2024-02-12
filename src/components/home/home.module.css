@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.movie-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style: none;
+  padding: 0;
+}
+
+.movie-list li {
+  margin: 20px;
+  width: 200px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.movie-list li a {
+  text-decoration: none;
+  color: #333;
+  display: block;
+  text-align: center;
+}
+
+.movie-list img {
+  width: 100%;
+  height: auto;
+}
