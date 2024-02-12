@@ -1,9 +1,8 @@
 import { useState } from "react";
 import useFetch from "../../hooks/useFetch";
 import SearchBar from "../searchbar/searchbar";
-import Cast from "../cast/cast";
-import Reviews from "../review/reviews";
 import { Link } from "react-router-dom";
+import css from "./movies.module.css";
 
 const Movies = () => {
   const [query, setQuery] = useState("");
@@ -16,17 +15,26 @@ const Movies = () => {
   };
 
   return (
-    <div>
+    <div className={css.container}>
       <SearchBar onSubmit={handleQueryChange} />
-      {isLoading && <div>Loading...</div>}
-      {error && <div>{error}</div>}
-      <div className="movies">
+      {isLoading && <div className={css.loading}>Loading...</div>}
+      {error && <div className={css.error}>{error}</div>}
+      <div className={css.movies}>
         {data &&
           data.results.map((movie) => {
             console.log(movie);
             return (
-              <Link to={`/movies/${movie.id}`} key={movie.id}>
+              <Link
+                to={`/movies/${movie.id}`}
+                key={movie.id}
+                className={css.movieLink}
+              >
                 {movie.title}
+                <img
+                  src={`https://image.tmdb.org/t/p/w500${movie.poster_path}`}
+                  alt=""
+                  className={css.movieImage}
+                />
               </Link>
             );
           })}

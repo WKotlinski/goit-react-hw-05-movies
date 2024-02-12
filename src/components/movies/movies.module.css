@@ -1,0 +1,35 @@
+.container {
+  padding: 20px;
+}
+
+.error,
+.loading {
+  color: red;
+  font-size: 20px;
+}
+
+.movies {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movieLink {
+  font-size: 18px;
+  color: black;
+  text-decoration: none;
+  margin: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.movieLink:hover {
+  color: blue;
+}
+
+.movieImage {
+  width: 200px;
+  height: auto;
+  margin-top: 10px;
+}
