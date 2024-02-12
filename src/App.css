@@ -4,30 +4,34 @@
   padding: 2rem;
   text-align: center;
 }
+
 ul {
   list-style: none;
   padding: 0;
 }
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+header {
+  background-color: #f8f9fa;
+  padding: 20px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+nav {
+  display: flex;
+  justify-content: space-around;
+}
+
+nav a {
+  color: #333;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+nav a.active {
+  color: #007bff;
+  font-weight: bold;
 }
 
 @media (prefers-reduced-motion: no-preference) {
