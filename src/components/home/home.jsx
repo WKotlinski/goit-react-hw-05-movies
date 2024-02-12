@@ -10,7 +10,7 @@ const Home = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    const FetchTrends = async () => {
+    const fetchTrends = async () => {
       try {
         setLoading(true);
         const { data } = await axios.get(
@@ -26,7 +26,7 @@ const Home = () => {
         console.log(movieList);
       }
     };
-    FetchTrends();
+    fetchTrends();
   }, []);
 
   return (

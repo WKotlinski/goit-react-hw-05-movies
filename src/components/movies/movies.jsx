@@ -22,7 +22,6 @@ const Movies = () => {
       <div className={css.movies}>
         {data &&
           data.results.map((movie) => {
-            console.log(movie);
             return (
               <Link
                 to={`/movies/${movie.id}`}

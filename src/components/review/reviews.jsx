@@ -1,6 +1,8 @@
+import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
 
-const Reviews = ({ movieId }) => {
+const Reviews = () => {
+  const { movieId } = useParams();
   const url = `https://api.themoviedb.org/3/movie/${movieId}/reviews?api_key=f538ea2fb2bd149bcd5c773b9ce949af`;
   const { data, isLoading, error } = useFetch(url);
 

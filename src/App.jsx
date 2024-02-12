@@ -17,19 +17,15 @@ function App() {
       <BrowserRouter>
         <header className="header">
           <nav className="nav">
-            <NavLink to="/" activeClassName="active">
-              Home
-            </NavLink>
-            <NavLink to="/movies" activeClassName="active">
-              Movies
-            </NavLink>
+            <NavLink to="/">Home</NavLink>
+            <NavLink to="/movies">Movies</NavLink>
           </nav>
         </header>
         <Suspense fallback={<div>Loading... </div>}>
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/movies" element={<Movies />} />
-            <Route path="/movies/:movieId" element={<MovieDetails />}>
+            <Route path="/movies/:movieId/*" element={<MovieDetails />}>
               <Route path="cast" element={<Cast />} />
               <Route path="reviews" element={<Reviews />} />
             </Route>
