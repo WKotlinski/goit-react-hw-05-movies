@@ -21,9 +21,7 @@ const Home = () => {
         console.log(error);
         setError("Error fetching data");
       } finally {
-        console.log("Data fetched");
         setLoading(false);
-        console.log(movieList);
       }
     };
     fetchTrends();
