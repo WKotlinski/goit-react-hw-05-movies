@@ -1,0 +1,10 @@
+.castList {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.castList li {
+  flex: 0 0 30%;
+  margin: 10px;
+}

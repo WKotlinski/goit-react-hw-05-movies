@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import useFetch from "../../hooks/useFetch";
+import css from "./cast.module.css";
 
 const Cast = () => {
   const { movieId } = useParams();
@@ -12,7 +13,7 @@ const Cast = () => {
       {data &&
         (data.cast.length > 0 ? (
           <div>
-            <ul>
+            <ul className={css.castList}>
               {data.cast.map((cast) => (
                 <li key={cast.id}>
                   <h3>{cast.name}</h3>
